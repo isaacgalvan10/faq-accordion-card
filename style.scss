@@ -1,0 +1,19 @@
+body {
+  background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    min-width: 300px;
+    background: #fff;
+    
+  }
+}
