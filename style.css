@@ -1,20 +1,21 @@
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(#af67e9, #6565e7);
-  height: 100vh;
+  height: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 .container {
   margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .container .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -22,8 +23,35 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 80px auto;
+  margin: 135px auto;
   min-width: 300px;
+  min-height: 500px;
   background: #fff;
+  border-radius: 20px;
+  padding-top: 130px;
+}
+
+.container .card .mobile-img {
+  background-image: url("./images/illustration-woman-online-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 250px;
+  top: 30px;
+  margin-bottom: -10px;
+  position: absolute;
+  margin-right: 25px;
+  z-index: 2;
+}
+
+.container .card .mobile-bg {
+  background-image: url("./images/bg-pattern-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 230px;
+  top: 130px;
+  position: absolute;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
