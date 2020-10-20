@@ -1,7 +1,6 @@
 
-body {
+html {
   background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  height: 100%;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -43,6 +42,45 @@ body {
       top: 130px;
       position: absolute;
       z-index: 1;
+    }
+
+    .content {
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .accordion {
+        min-width: 300px;
+        padding: 0 10px;
+
+        .question {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 15px;
+          border-bottom: solid 1px hsl(240, 5%, 91%);
+
+          .q-a {
+            font-size: 14px;
+
+            .toggle {
+              color: hsl(240, 6%, 50%);
+              margin-top: 15px;
+              display: none;
+            }
+          }
+
+          .downArrow {
+            background-image: url('./images/icon-arrow-down.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 10px;
+            width: 12px;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
     }
   }
 }
