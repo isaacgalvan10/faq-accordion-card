@@ -54,23 +54,24 @@ html {
         min-width: 300px;
         padding: 0 10px;
 
-        .question {
+        .q-a {
           display: flex;
           justify-content: space-between;
           padding-bottom: 15px;
           border-bottom: solid 1px hsl(240, 5%, 91%);
+          padding-top: 10px;
 
-          .q-a {
-            font-size: 14px;
+          .question {
+            font-size: .9rem;
 
-            .toggle {
+            .answer {
               color: hsl(240, 6%, 50%);
               margin-top: 15px;
               display: none;
             }
           }
 
-          .downArrow {
+          .arrow {
             background-image: url('./images/icon-arrow-down.svg');
             background-repeat: no-repeat;
             background-size: contain;
@@ -79,8 +80,25 @@ html {
             position: relative;
             top: 2px;
           }
+
+          .arrow.active {
+            background-image: url('./images/icon-arrow-down.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 10px;
+            width: 12px;
+            position: relative;
+            top: 1px;
+            right: 1px;
+            padding: 5px;
+            transform: rotate(180deg);
+          }
         }
       }
     }
   }
+}
+
+.q-a.active .answer {
+  display: block;
 }

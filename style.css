@@ -64,7 +64,7 @@ html {
   padding: 0 10px;
 }
 
-.container .card .content .accordion .question {
+.container .card .content .accordion .q-a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,19 +73,20 @@ html {
           justify-content: space-between;
   padding-bottom: 15px;
   border-bottom: solid 1px #e7e7e9;
+  padding-top: 10px;
 }
 
-.container .card .content .accordion .question .q-a {
-  font-size: 14px;
+.container .card .content .accordion .q-a .question {
+  font-size: .9rem;
 }
 
-.container .card .content .accordion .question .q-a .toggle {
+.container .card .content .accordion .q-a .question .answer {
   color: #787887;
   margin-top: 15px;
   display: none;
 }
 
-.container .card .content .accordion .question .downArrow {
+.container .card .content .accordion .q-a .arrow {
   background-image: url("./images/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -93,5 +94,23 @@ html {
   width: 12px;
   position: relative;
   top: 2px;
+}
+
+.container .card .content .accordion .q-a .arrow.active {
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10px;
+  width: 12px;
+  position: relative;
+  top: 1px;
+  right: 1px;
+  padding: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.q-a.active .answer {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
