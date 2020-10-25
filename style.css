@@ -27,36 +27,42 @@ html {
   min-height: 500px;
   background: #fff;
   border-radius: 20px;
-  padding-top: 130px;
+  padding: 130px 0 40px 0;
+  -webkit-filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.25));
 }
 
-.container .card .mobile-img {
+.container .card .img {
   background-image: url("./images/illustration-woman-online-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
   width: 250px;
-  top: 30px;
+  top: -100px;
   margin-bottom: -10px;
   position: absolute;
   margin-right: 25px;
   z-index: 2;
 }
 
-.container .card .mobile-bg {
+.container .card .img-bg {
   background-image: url("./images/bg-pattern-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
   width: 230px;
-  top: 130px;
+  top: 0;
   position: absolute;
   z-index: 1;
 }
 
+.container .card .content {
+  margin: 0 25px;
+}
+
 .container .card .content h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 15px 0 30px 0;
 }
 
 .container .card .content .accordion {
@@ -83,6 +89,10 @@ html {
           align-items: center;
   position: relative;
   cursor: pointer;
+}
+
+.container .card .content .accordion .accordion-item .accordion-item-header :hover {
+  color: #f47c57;
 }
 
 .container .card .content .accordion .accordion-item .accordion-item-header .arrow {
@@ -116,5 +126,89 @@ html {
   padding: 5px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.accordion-item-header.active {
+  font-weight: 700;
+}
+
+@media all and (min-width: 760px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  html {
+    font-size: 22px;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .container .box-container {
+    margin: 135px auto;
+    padding: 20px 0;
+    max-width: 1100px;
+    position: absolute;
+    z-index: 5;
+  }
+  .container .box-container .desktop-box {
+    background-image: url(./images/illustration-box-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    top: 65px;
+    left: -100px;
+    margin-bottom: -10px;
+    position: absolute;
+    margin-right: 25px;
+    z-index: 3;
+  }
+  .container .card {
+    padding: 20px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow: hidden;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-width: 1100px;
+  }
+  .container .card .img {
+    background-image: url("./images/illustration-woman-online-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 342px;
+    width: 450px;
+    top: 85px;
+    left: -75px;
+    position: absolute;
+    z-index: 2;
+  }
+  .container .card .img-bg {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 800px;
+    top: -130px;
+    left: -350px;
+    position: absolute;
+    z-index: 1;
+  }
+  .container .card .content {
+    max-width: 500px;
+    padding-left: 30px;
+  }
+  .container .card .content .h1 {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
