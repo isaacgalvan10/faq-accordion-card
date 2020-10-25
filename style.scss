@@ -55,73 +55,47 @@ html {
         padding: 0 10px;
 
         .accordion-item {
-          // display: flex;
-          // justify-content: space-between;
           padding-bottom: 15px;
           border-bottom: solid 1px hsl(240, 5%, 91%);
           padding-top: 10px;
 
-          .question {
+          .accordion-item-header {
             font-size: .9rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
             cursor: pointer;
-          }
 
-          .accordion-item-body {
-            
-            .answer {
-              color: hsl(240, 6%, 50%);
-              margin-top: 15px;
-              display: none;
+            .arrow {
+              background-image: url('./images/icon-arrow-down.svg');
+              background-repeat: no-repeat;
+              background-size: contain;
+              height: 10px;
+              width: 12px;
+              position: relative;
+              top: 2px;
+              transition: transform 0.2s ease-in-out;
             }
           }
 
-
-          .arrow {
-            background-image: url('./images/icon-arrow-down.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 10px;
-            width: 12px;
-            position: relative;
-            top: 2px;
-            transition: transform 0.2s ease-in-out;
+          .accordion-item-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-in-out;
+            
+            .accordion-item-body-content {
+              color: hsl(240, 6%, 50%);
+              margin-top: 15px;
+            }
           }
-
-          // .arrow.active {
-          //   background-image: url('./images/icon-arrow-down.svg');
-          //   background-repeat: no-repeat;
-          //   background-size: contain;
-          //   height: 10px;
-          //   width: 12px;
-          //   position: relative;
-          //   top: 1px;
-          //   right: 1px;
-          //   padding: 5px;
-          //   transform: rotate(180deg);
-          // }
         }
       }
     }
   }
 }
 
-.accordion-item.active + .answer {
-  display: block;
-  background-color: red;
-}
-
-.accordion-item.active .arrow {
-  background-image: url('./images/icon-arrow-down.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 10px;
-  width: 12px;
-  position: relative;
-  top: 1px;
+.accordion-item-header.active .arrow {
   right: 1px;
   padding: 5px;
   transform: rotate(180deg);

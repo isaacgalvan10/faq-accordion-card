@@ -70,7 +70,7 @@ html {
   padding-top: 10px;
 }
 
-.container .card .content .accordion .accordion-item .question {
+.container .card .content .accordion .accordion-item .accordion-item-header {
   font-size: .9rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,13 +85,7 @@ html {
   cursor: pointer;
 }
 
-.container .card .content .accordion .accordion-item .accordion-item-body .answer {
-  color: #787887;
-  margin-top: 15px;
-  display: none;
-}
-
-.container .card .content .accordion .accordion-item .arrow {
+.container .card .content .accordion .accordion-item .accordion-item-header .arrow {
   background-image: url("./images/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -105,19 +99,19 @@ html {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-.accordion-item.active + .answer {
-  display: block;
-  background-color: red;
+.container .card .content .accordion .accordion-item .accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
 }
 
-.accordion-item.active .arrow {
-  background-image: url("./images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 10px;
-  width: 12px;
-  position: relative;
-  top: 1px;
+.container .card .content .accordion .accordion-item .accordion-item-body .accordion-item-body-content {
+  color: #787887;
+  margin-top: 15px;
+}
+
+.accordion-item-header.active .arrow {
   right: 1px;
   padding: 5px;
   -webkit-transform: rotate(180deg);

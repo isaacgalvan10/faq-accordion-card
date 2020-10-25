@@ -1,31 +1,18 @@
-let qAndA = document.querySelectorAll('.q-a');
+const accordionItemHeaders = document.querySelectorAll('.accordion-item-header');
 
-// qAndA.forEach(element => {
-//   element.addEventListener('click', toggleAccordion);
-// });
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener('click', function () {
+    accordionItemHeader.classList.toggle('active');
 
-for (i = 0; i < qAndA.length; i++) {
-  qAndA[i].addEventListener('click', function () {
-    this.classList.toggle('active');
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    console.log(accordionItemBody);
 
-    // let answer = document.querySelectorAll('.answer');
-    // for (i = 0; i < answer.length; i++) {
-    //   console.log(answer[i]);
-    //   answer[i].classList.toggle('active');
-    // };
-
+    if (accordionItemHeader.classList.contains('active')) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+      accordionItemBody.style.overflow = 'visible';
+    } else {
+      accordionItemBody.style.maxHeight = 0;
+      accordionItemBody.style.overflow = 'hidden';
+    }
   })
-}
-
-// function toggleAccordion() {
-//   let answer = document.querySelectorAll('.answer');
-//   let arrow = document.querySelectorAll('.arrow');
-
-//   answer.forEach(item => {
-//     item.classList.toggle('active')
-//   })
-
-//   arrow.forEach(item => {
-//     item.classList.toggle('active');
-//   })
-// };
+});
